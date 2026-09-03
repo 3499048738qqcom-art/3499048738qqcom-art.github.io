@@ -1333,3 +1333,233 @@ footer {
   }
 
 }
+/* =====================================================
+   NOTES ARCHIVE
+===================================================== */
+
+.notes-page {
+  min-height: 100vh;
+  padding:
+    170px 9vw 100px;
+}
+
+
+.notes-hero {
+  max-width: 1000px;
+  padding-bottom: 80px;
+}
+
+
+.notes-hero h1 {
+  margin: 25px 0;
+
+  font-size:
+    clamp(
+      80px,
+      15vw,
+      190px
+    );
+
+  line-height: .8;
+
+  letter-spacing: -.09em;
+}
+
+
+.notes-hero h1 span {
+  color: var(--purple);
+}
+
+
+.notes-hero > p:last-child {
+  max-width: 600px;
+
+  color: #858590;
+
+  font-size: 17px;
+}
+
+
+.archive {
+  border-top:
+    1px solid var(--line);
+}
+
+
+.archive-item {
+  display: grid;
+
+  grid-template-columns:
+    80px 1fr 120px;
+
+  align-items: center;
+
+  gap: 30px;
+
+  min-height: 220px;
+
+  padding: 30px 0;
+
+  border-bottom:
+    1px solid var(--line);
+
+  transition:
+    .35s ease;
+}
+
+
+.archive-item:hover {
+  padding-left: 20px;
+
+  padding-right: 20px;
+
+  background:
+    rgba(
+      155,
+      124,
+      255,
+      .035
+    );
+}
+
+
+.archive-number {
+  color: #55555e;
+
+  font:
+    11px "Space Mono",
+    monospace;
+}
+
+
+.archive-type {
+  color: #686871;
+
+  font:
+    9px "Space Mono",
+    monospace;
+
+  letter-spacing: 2px;
+}
+
+
+.archive-info h2 {
+  margin:
+    12px 0 8px;
+
+  font-size:
+    clamp(
+      28px,
+      4vw,
+      48px
+    );
+
+  line-height: 1;
+
+  letter-spacing: -.04em;
+}
+
+
+.archive-info p {
+  margin: 0;
+
+  color: #777780;
+
+  font-size: 13px;
+}
+
+
+.archive-date {
+  text-align: right;
+
+  color: #666670;
+
+  font:
+    9px "Space Mono",
+    monospace;
+
+  letter-spacing: 1px;
+}
+
+
+.archive-date span {
+  display: inline-block;
+
+  margin-left: 10px;
+
+  color: var(--purple);
+
+  font-size: 20px;
+
+  transition:
+    .3s;
+}
+
+
+.archive-item:hover
+.archive-date span {
+  transform:
+    translate(
+      5px,
+      -5px
+    );
+}
+
+
+.back-home {
+  margin-top: 50px;
+}
+
+
+.back-home a {
+  color: #888892;
+
+  font:
+    9px "Space Mono",
+    monospace;
+
+  letter-spacing: 1px;
+}
+
+
+.back-home a:hover {
+  color: white;
+}
+
+
+@media (max-width: 700px) {
+
+  .notes-page {
+    padding:
+      130px 7vw 80px;
+  }
+
+
+  .notes-hero h1 {
+    font-size: 25vw;
+  }
+
+
+  .archive-item {
+    grid-template-columns:
+      40px 1fr;
+
+    gap: 15px;
+
+    min-height: 180px;
+  }
+
+
+  .archive-date {
+    grid-column: 2;
+
+    text-align: left;
+  }
+
+
+  .archive-info h2 {
+    font-size:
+      8vw;
+  }
+
+}
