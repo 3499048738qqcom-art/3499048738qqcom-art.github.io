@@ -1,194 +1,900 @@
 <!doctype html>
 <html lang="zh-CN">
+
 <head>
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="生气的路人 · Angry Passerby — 个人博客">
-  <title>Angry Passerby · 生气的路人</title>
+
+  <meta
+    name="description"
+    content="ANGRY PASSERBY · 生气的路人 — Personal Brand & Digital Playground"
+  >
+
+  <meta
+    name="keywords"
+    content="Angry Passerby, 生气的路人, Blog, Projects, Technology"
+  >
+
+  <meta name="author" content="Angry Passerby">
+
+  <title>ANGRY PASSERBY · 生气的路人</title>
+
+  <!-- Google Fonts -->
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Website CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
 
-  <div class="stars"></div>
+  <!-- ========================================
+       Background
+  ========================================= -->
 
-  <nav>
-    <a class="logo" href="#home">AP<span>.</span></a>
+  <div class="noise"></div>
 
-    <div class="nav-links">
-      <a href="#home">首页</a>
-      <a href="#posts">文章</a>
-      <a href="#projects">项目</a>
-      <a href="#about">关于</a>
-    </div>
-  </nav>
+  <div class="grid-bg"></div>
 
-  <main>
-
-    <section id="home" class="hero">
-
-      <p class="eyebrow">WELCOME TO MY DIGITAL SPACE</p>
-
-      <h1>
-        ANGRY<br>
-        <span>PASSERBY</span>
-      </h1>
-
-      <p class="subtitle">生气的路人</p>
-
-      <p class="intro">
-        记录生活，也记录一些技术。<br>
-        偶尔思考，偶尔折腾。
-      </p>
-
-      <div class="buttons">
-        <a class="btn primary" href="#posts">进入博客 →</a>
-        <a class="btn" href="#projects">看看项目</a>
-      </div>
-
-      <div class="scroll">
-        SCROLL ↓
-      </div>
-
-    </section>
+  <div class="cursor-glow"></div>
 
 
-    <section id="posts" class="section">
+  <!-- ========================================
+       Header
+  ========================================= -->
 
-      <div class="section-head">
-        <span>01</span>
-        <h2>Latest Thoughts</h2>
-      </div>
+  <header class="site-header">
 
-      <div class="cards">
+    <!-- Logo -->
+    <a
+      class="brand"
+      href="#home"
+      aria-label="Angry Passerby Home"
+    >
 
-        <article class="card">
-          <small>2026 · 09 · 02</small>
-          <h3>我的第一个网站</h3>
+      <span class="brand-mark">
+        AP
+      </span>
 
-          <p>
-            从买下一个域名开始，
-            给自己建立一个属于互联网的小空间。
-          </p>
+      <span class="brand-name">
+        ANGRY PASSERBY<span class="dot">.</span>
+      </span>
 
-          <a href="#">READ MORE →</a>
-        </article>
-
-
-        <article class="card">
-          <small>TECH / NOTES</small>
-
-          <h3>正在折腾的东西</h3>
-
-          <p>
-            AI、编程、自动化，
-            以及那些突然想研究一下的东西。
-          </p>
-
-          <a href="#">READ MORE →</a>
-        </article>
+    </a>
 
 
-        <article class="card">
+    <!-- Navigation -->
+    <nav class="nav">
 
-          <small>LIFE / THOUGHTS</small>
+      <a
+        class="active"
+        href="#home"
+      >
+        HOME
+      </a>
 
-          <h3>路过，留下点什么</h3>
+      <a href="#about">
+        ABOUT
+      </a>
 
-          <p>
-            博客不一定要有答案，
-            有时候记录本身就很有意义。
-          </p>
+      <a href="#projects">
+        PROJECTS
+      </a>
 
-          <a href="#">READ MORE →</a>
+      <a href="#notes">
+        NOTES
+      </a>
 
-        </article>
-
-      </div>
-
-    </section>
-
-
-    <section id="projects" class="section">
-
-      <div class="section-head">
-        <span>02</span>
-        <h2>Projects</h2>
-      </div>
+    </nav>
 
 
-      <div class="project">
+    <!-- Status -->
+    <a
+      class="header-status"
+      href="#contact"
+    >
 
-        <div>
-          <p class="tag">PROJECT 001</p>
-          <h3>My Digital Playground</h3>
-        </div>
+      <span class="status-dot"></span>
 
-        <p>
-          这里以后放你的项目、作品、
-          GitHub 项目和折腾记录。
+      AVAILABLE
+
+    </a>
+
+  </header>
+
+
+
+  <!-- ========================================
+       Main
+  ========================================= -->
+
+  <main id="home">
+
+
+    <!-- ======================================
+         HERO
+    ======================================= -->
+
+    <section class="hero section-pad">
+
+
+      <!-- Hero Left -->
+      <div class="hero-copy reveal">
+
+
+        <p class="kicker">
+
+          <span>01</span>
+
+          DIGITAL EXPLORER / BUILDER
+
         </p>
 
-        <span class="arrow">↗</span>
 
-      </div>
+        <h1>
+
+          <span class="line">
+            ANGRY
+          </span>
+
+          <span class="line accent">
+
+            PASSERBY
+
+            <span class="cursor">
+              _
+            </span>
+
+          </span>
+
+        </h1>
 
 
-      <div class="project">
-
-        <div>
-          <p class="tag">PROJECT 002</p>
-          <h3>Coming Soon</h3>
-        </div>
-
-        <p>
-          下一个想法，正在路上。
+        <p class="hero-cn">
+          生气的路人
         </p>
 
-        <span class="arrow">↗</span>
+
+        <p class="hero-desc">
+
+          一个普通路人的数字角落。
+
+          <br>
+
+          <strong>
+            折腾技术 · 做点项目 · 记录想法 · 偶尔发呆
+          </strong>
+
+        </p>
+
+
+        <!-- Buttons -->
+        <div class="hero-actions">
+
+          <a
+            class="btn btn-main"
+            href="#projects"
+          >
+
+            EXPLORE WORK
+
+            <span>
+              ↗
+            </span>
+
+          </a>
+
+
+          <a
+            class="text-link"
+            href="#about"
+          >
+
+            WHO AM I?
+
+            <span>
+              ↓
+            </span>
+
+          </a>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- ====================================
+           Hero Right
+      ===================================== -->
+
+      <div class="hero-side reveal delay-1">
+
+
+        <!-- Orb -->
+        <div class="orb-wrap">
+
+          <div class="orb"></div>
+
+          <div class="orb-ring ring-a"></div>
+
+          <div class="orb-ring ring-b"></div>
+
+
+          <span class="orb-label label-a">
+            CURIOUS
+          </span>
+
+
+          <span class="orb-label label-b">
+            BUILD
+          </span>
+
+
+          <span class="orb-label label-c">
+            REPEAT
+          </span>
+
+        </div>
+
+
+
+        <!-- Terminal -->
+        <div class="mini-terminal">
+
+
+          <div class="terminal-top">
+
+            <span></span>
+
+            <span></span>
+
+            <span></span>
+
+            <b>
+              guest@angrypasserby
+            </b>
+
+          </div>
+
+
+          <div class="terminal-body">
+
+
+            <p>
+
+              <i>
+                ~
+              </i>
+
+              whoami
+
+            </p>
+
+
+            <p class="terminal-output">
+
+              just a passerby.
+
+            </p>
+
+
+            <p>
+
+              <i>
+                ~
+              </i>
+
+              status
+
+            </p>
+
+
+            <p class="terminal-output live">
+
+              ● building something
+
+            </p>
+
+
+            <p>
+
+              <i>
+                ~
+              </i>
+
+              <span class="blink">
+                _
+              </span>
+
+            </p>
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- Scroll -->
+      <div class="hero-scroll">
+
+        SCROLL TO EXPLORE
+
+        <span>
+          ↓
+        </span>
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- ======================================
+         ABOUT
+    ======================================= -->
+
+    <section
+      id="about"
+      class="about section-pad"
+    >
+
+
+      <div class="section-label reveal">
+
+        <span>
+          02
+        </span>
+
+        ABOUT THE PASSERBY
+
+      </div>
+
+
+
+      <div class="about-grid">
+
+
+        <!-- About title -->
+        <div class="about-title reveal">
+
+
+          <p class="eyebrow">
+
+            NICE TO MEET YOU.
+
+          </p>
+
+
+          <h2>
+
+            I DON'T HAVE
+            <br>
+
+            <em>
+              ALL THE ANSWERS.
+            </em>
+
+          </h2>
+
+
+        </div>
+
+
+
+        <!-- About text -->
+        <div class="about-text reveal delay-1">
+
+
+          <p class="big-text">
+
+            但我喜欢把问题拆开，
+
+            <br>
+
+            一点一点搞明白。
+
+          </p>
+
+
+          <p>
+
+            这里是我的个人数字空间。
+            以后会放一些技术笔记、项目记录、
+            学习过程和生活里的奇思妙想。
+
+          </p>
+
+
+          <p>
+
+            不追求完美，先做出来再说。
+
+          </p>
+
+
+
+          <!-- Stats -->
+          <div class="stats">
+
+
+            <div>
+
+              <strong>
+                ∞
+              </strong>
+
+              <span>
+                IDEAS
+              </span>
+
+            </div>
+
+
+            <div>
+
+              <strong>
+                24/7
+              </strong>
+
+              <span>
+                CURIOUS
+              </span>
+
+            </div>
+
+
+            <div>
+
+              <strong>
+                01
+              </strong>
+
+              <span>
+                PASSERBY
+              </span>
+
+            </div>
+
+
+          </div>
+
+
+        </div>
 
       </div>
 
     </section>
 
 
-    <section id="about" class="about">
 
-      <p class="eyebrow">
-        03 · ABOUT
-      </p>
+    <!-- ======================================
+         PROJECTS
+    ======================================= -->
 
-      <h2>
-        一个正在探索<br>
-        互联网的人。
-      </h2>
+    <section
+      id="projects"
+      class="projects section-pad"
+    >
 
-      <p>
-        这里是“生气的路人”的个人空间。
-        以后我会在这里记录技术、项目、学习、生活，
-        以及一些不一定有用但很想写下来的想法。
-      </p>
+
+      <div class="section-label reveal">
+
+        <span>
+          03
+        </span>
+
+        SELECTED PROJECTS
+
+      </div>
+
+
+
+      <div class="project-list">
+
+
+        <!-- Project 01 -->
+        <a
+          class="project-card reveal"
+          href="#"
+        >
+
+
+          <div class="project-no">
+            001
+          </div>
+
+
+          <div class="project-main">
+
+
+            <p>
+              AUTOMATION / ROBOTICS
+            </p>
+
+
+            <h3>
+
+              SMART SORTING
+              <br>
+
+              <span>
+                SYSTEM
+              </span>
+
+            </h3>
+
+
+            <span class="project-desc">
+
+              工业机器人 · PLC · RFID · 仿真
+
+            </span>
+
+
+          </div>
+
+
+          <div class="project-arrow">
+            ↗
+          </div>
+
+
+        </a>
+
+
+
+        <!-- Project 02 -->
+        <a
+          class="project-card reveal delay-1"
+          href="#"
+        >
+
+
+          <div class="project-no">
+            002
+          </div>
+
+
+          <div class="project-main">
+
+
+            <p>
+              WEB / PERSONAL BRAND
+            </p>
+
+
+            <h3>
+
+              ANGRY
+              <br>
+
+              <span>
+                PASSERBY
+              </span>
+
+            </h3>
+
+
+            <span class="project-desc">
+
+              这个网站 · 个人品牌 · 数字空间
+
+            </span>
+
+
+          </div>
+
+
+          <div class="project-arrow">
+            ↗
+          </div>
+
+
+        </a>
+
+
+
+        <!-- Project 03 -->
+        <a
+          class="project-card reveal delay-2"
+          href="#"
+        >
+
+
+          <div class="project-no">
+            003
+          </div>
+
+
+          <div class="project-main">
+
+
+            <p>
+              EXPERIMENT / FUTURE
+            </p>
+
+
+            <h3>
+
+              COMING
+              <br>
+
+              <span>
+                SOON
+              </span>
+
+            </h3>
+
+
+            <span class="project-desc">
+
+              下一次折腾的东西
+
+            </span>
+
+
+          </div>
+
+
+          <div class="project-arrow">
+            ↗
+          </div>
+
+
+        </a>
+
+
+      </div>
 
     </section>
+
+
+
+    <!-- ======================================
+         NOTES / BLOG
+    ======================================= -->
+
+    <section
+      id="notes"
+      class="notes section-pad"
+    >
+
+
+      <div class="section-label reveal">
+
+        <span>
+          04
+        </span>
+
+        RECENT NOTES
+
+      </div>
+
+
+
+      <div class="notes-grid">
+
+
+        <!-- Note 01 -->
+        <article class="note-card reveal">
+
+
+          <span class="note-type">
+            TECH NOTE
+          </span>
+
+
+          <span class="note-date">
+            2026.09
+          </span>
+
+
+          <h3>
+
+            把一个网站真正放到互联网上
+
+          </h3>
+
+
+          <p>
+
+            从域名、GitHub Pages，
+            到 DNS 和 HTTPS。
+            原来自己的网站真的没有想象中那么难。
+
+          </p>
+
+
+          <a href="#">
+            READ NOTE ↗
+          </a>
+
+
+        </article>
+
+
+
+        <!-- Note 02 -->
+        <article class="note-card reveal delay-1">
+
+
+          <span class="note-type">
+            THOUGHT
+          </span>
+
+
+          <span class="note-date">
+            SOON
+          </span>
+
+
+          <h3>
+
+            为什么总想折腾一些东西？
+
+          </h3>
+
+
+          <p>
+
+            有些问题没有实际意义，
+            但搞明白它的过程很有意思。
+
+          </p>
+
+
+          <a href="#">
+            READ NOTE ↗
+          </a>
+
+
+        </article>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ======================================
+         CONTACT
+    ======================================= -->
+
+    <section
+      id="contact"
+      class="contact section-pad"
+    >
+
+
+      <div class="contact-inner reveal">
+
+
+        <p class="kicker">
+
+          <span>
+            05
+          </span>
+
+          END OF THE PAGE
+
+        </p>
+
+
+        <h2>
+
+          STAY
+
+          <br>
+
+          <span>
+            CURIOUS.
+          </span>
+
+        </h2>
+
+
+        <p>
+
+          如果你也喜欢折腾，
+          那我们大概会聊得来。
+
+        </p>
+
+
+        <div class="contact-links">
+
+
+          <a
+            href="https://github.com/"
+            target="_blank"
+            rel="noopener"
+          >
+
+            GITHUB ↗
+
+          </a>
+
+
+          <a
+            href="mailto:hello@angrypasserby.com"
+          >
+
+            EMAIL ↗
+
+          </a>
+
+
+          <a href="#home">
+
+            BACK TO TOP ↑
+
+          </a>
+
+
+        </div>
+
+
+      </div>
+
+
+    </section>
+
 
   </main>
 
 
+
+  <!-- ========================================
+       Footer
+  ========================================= -->
+
   <footer>
 
-    <span>
-      © 2026 ANGRY PASSERBY
-    </span>
 
     <span>
-      angrypass﻿erby.com
+
+      © 2026 ANGRY PASSERBY
+
     </span>
+
+
+    <span>
+
+      MADE WITH CURIOSITY ·
+      angrypasserby.com
+
+    </span>
+
 
   </footer>
 
 
+
+  <!-- Website JavaScript -->
   <script src="script.js"></script>
 
 </body>
-</html>
 
+</html>
