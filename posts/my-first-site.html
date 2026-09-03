@@ -1,4 +1,372 @@
-# 我是路人的博客
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>我的第一个网站 · Angry Passerby</title>
+
+  <meta
+    name="description"
+    content="记录我第一次拥有自己的网站。"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="../style.css"
+  >
+
+  <style>
+
+    .article-page {
+      min-height: 100vh;
+      padding:
+        160px 9vw 100px;
+    }
+
+    .article-header {
+      max-width: 900px;
+      margin: 0 auto 70px;
+    }
+
+    .article-meta {
+      font:
+        10px "Space Mono",
+        monospace;
+
+      letter-spacing: 2px;
+
+      color: #777780;
+
+      margin-bottom: 25px;
+    }
+
+    .article-title {
+      font-size:
+        clamp(45px, 7vw, 90px);
+
+      line-height: 1;
+
+      letter-spacing: -0.06em;
+
+      margin: 0 0 25px;
+    }
+
+    .article-intro {
+      color: #92929b;
+
+      font-size: 18px;
+
+      line-height: 1.9;
+    }
+
+    .article-content {
+      max-width: 780px;
+
+      margin: 0 auto;
+
+      color: #c9c9d0;
+
+      font-size: 17px;
+
+      line-height: 2;
+    }
+
+    .article-content h2 {
+      margin-top: 65px;
+
+      color: white;
+
+      font-size: 30px;
+
+      line-height: 1.2;
+
+      letter-spacing: -1px;
+    }
+
+    .article-content p {
+      margin: 25px 0;
+    }
+
+    .article-content blockquote {
+      margin: 40px 0;
+
+      padding: 20px 25px;
+
+      border-left:
+        2px solid #9b7cff;
+
+      background:
+        rgba(155, 124, 255, .05);
+
+      color: #a7a7b0;
+    }
+
+    .article-content code {
+      padding: 3px 7px;
+
+      border-radius: 5px;
+
+      background: #111118;
+
+      color: #bdafff;
+
+      font-family:
+        "Space Mono",
+        monospace;
+
+      font-size: 13px;
+    }
+
+    .article-back {
+      display: inline-block;
+
+      margin-top: 70px;
+
+      color: #aaaab2;
+
+      font:
+        10px "Space Mono",
+        monospace;
+
+      letter-spacing: 1px;
+    }
+
+    .article-back:hover {
+      color: white;
+    }
+
+  </style>
+
+</head>
 
 
+<body>
 
+  <div class="noise"></div>
+
+  <div class="grid-bg"></div>
+
+  <div class="cursor-glow"></div>
+
+
+  <header class="site-header">
+
+    <a
+      class="brand"
+      href="../index.html"
+    >
+
+      <span class="brand-mark">
+        AP
+      </span>
+
+      <span class="brand-name">
+        ANGRY PASSERBY<span class="dot">.</span>
+      </span>
+
+    </a>
+
+
+    <nav class="nav">
+
+      <a href="../index.html#home">
+        HOME
+      </a>
+
+      <a href="../index.html#about">
+        ABOUT
+      </a>
+
+      <a href="../index.html#projects">
+        PROJECTS
+      </a>
+
+      <a
+        href="../index.html#notes"
+        class="active"
+      >
+        NOTES
+      </a>
+
+    </nav>
+
+  </header>
+
+
+  <main class="article-page">
+
+    <header class="article-header">
+
+      <div class="article-meta">
+
+        TECH NOTE · 2026.09
+
+      </div>
+
+
+      <h1 class="article-title">
+
+        我的第一个网站
+
+      </h1>
+
+
+      <p class="article-intro">
+
+        从买下一个域名开始，
+        给自己建立一个真正属于互联网的小空间。
+
+      </p>
+
+    </header>
+
+
+    <article class="article-content">
+
+
+      <p>
+
+        今天，我终于拥有了自己的域名：
+
+        <code>angrypasserby.com</code>
+
+      </p>
+
+
+      <p>
+
+        一开始我只是觉得，
+        “如果有一个属于自己的网站，好像挺有意思。”
+
+        但真正开始以后才发现，
+        从域名、网页，到部署上线，
+        每一个步骤都像是在探索一个新的世界。
+
+      </p>
+
+
+      <blockquote>
+
+        Just passing by, but leaving something behind.
+
+      </blockquote>
+
+
+      <h2>
+
+        为什么想做一个博客？
+
+      </h2>
+
+
+      <p>
+
+        很多东西如果只是存在脑子里，
+        过一段时间就会慢慢消失。
+
+        写下来以后，它们就有了一个真正存在的地方。
+
+      </p>
+
+
+      <p>
+
+        所以我想把这里当成自己的数字空间。
+
+        可以写技术，可以写项目，
+        也可以记录一些生活和突然冒出来的想法。
+
+      </p>
+
+
+      <h2>
+
+        接下来会写什么？
+
+      </h2>
+
+
+      <p>
+
+        可能会有 AI、编程、自动化、
+        PLC、机器人，也可能只是某一天突然想到的一件小事。
+
+      </p>
+
+
+      <p>
+
+        不需要每一篇文章都有多么深刻。
+
+        有时候，
+
+        <strong>
+          “我今天折腾了一个东西。”
+        </strong>
+
+        本身就是值得记录的事情。
+
+      </p>
+
+
+      <h2>
+
+        网站才刚刚开始
+
+      </h2>
+
+
+      <p>
+
+        这只是第一篇文章。
+
+        后面还会继续改这个网站，
+        加更多页面、更多项目，
+        也会慢慢让这里变成真正属于我的地方。
+
+      </p>
+
+
+      <a
+        class="article-back"
+        href="../index.html#notes"
+      >
+
+        ← BACK TO NOTES
+
+      </a>
+
+
+    </article>
+
+  </main>
+
+
+  <script src="../script.js"></script>
+
+</body>
+
+</html>
