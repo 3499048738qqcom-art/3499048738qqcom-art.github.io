@@ -1,0 +1,1413 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="MY PICKS · 生气的路人 · 网站、工具与资源推荐"
+  >
+
+  <meta
+    name="author"
+    content="Angry Passerby"
+  >
+
+  <title>
+    MY PICKS · Angry Passerby
+  </title>
+
+
+  <!-- Fonts -->
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <!-- Main CSS -->
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+
+  <style>
+
+    /* =====================================================
+       PICKS PAGE
+    ===================================================== */
+
+    .picks-page {
+
+      min-height: 100vh;
+
+      padding:
+        170px 9vw 110px;
+
+    }
+
+
+    /* ==========================================
+       HERO
+    ========================================== */
+
+    .picks-hero {
+
+      max-width: 1000px;
+
+      padding-bottom: 90px;
+
+    }
+
+
+    .picks-hero h1 {
+
+      margin:
+        28px 0;
+
+      font-size:
+        clamp(
+          80px,
+          15vw,
+          190px
+        );
+
+      line-height: .78;
+
+      letter-spacing:
+        -.09em;
+
+      font-weight:
+        900;
+
+    }
+
+
+    .picks-hero h1 span {
+
+      color:
+        var(--purple);
+
+    }
+
+
+    .picks-hero > p:last-child {
+
+      max-width:
+        680px;
+
+      color:
+        #858590;
+
+      font-size:
+        17px;
+
+      line-height:
+        1.9;
+
+    }
+
+
+    /* ==========================================
+       CATEGORY
+    ========================================== */
+
+    .pick-category {
+
+      margin-top:
+        75px;
+
+    }
+
+
+    .category-title {
+
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      gap:
+        18px;
+
+      margin-bottom:
+        25px;
+
+      padding-bottom:
+        18px;
+
+      border-bottom:
+        1px solid var(--line);
+
+    }
+
+
+    .category-number {
+
+      color:
+        var(--purple);
+
+      font:
+        10px "Space Mono",
+        monospace;
+
+    }
+
+
+    .category-title h2 {
+
+      margin:
+        0;
+
+      font-size:
+        25px;
+
+      letter-spacing:
+        -.03em;
+
+    }
+
+
+    .category-title span {
+
+      margin-left:
+        auto;
+
+      color:
+        #55555e;
+
+      font:
+        8px "Space Mono",
+        monospace;
+
+      letter-spacing:
+        1px;
+
+    }
+
+
+    /* ==========================================
+       PICK CARDS
+    ========================================== */
+
+    .pick-grid {
+
+      display:
+        grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap:
+        15px;
+
+    }
+
+
+    .pick-card {
+
+      min-height:
+        280px;
+
+      padding:
+        27px;
+
+      border:
+        1px solid var(--line);
+
+      background:
+        rgba(
+          255,
+          255,
+          255,
+          .018
+        );
+
+      position:
+        relative;
+
+      overflow:
+        hidden;
+
+      transition:
+        .35s ease;
+
+    }
+
+
+    .pick-card::before {
+
+      content:
+        "";
+
+      position:
+        absolute;
+
+      width:
+        220px;
+
+      height:
+        220px;
+
+      right:
+        -90px;
+
+      bottom:
+        -100px;
+
+      border-radius:
+        50%;
+
+      background:
+        radial-gradient(
+          circle,
+          rgba(
+            155,
+            124,
+            255,
+            .16
+          ),
+          transparent 68%
+        );
+
+      filter:
+        blur(15px);
+
+      transition:
+        .35s;
+
+    }
+
+
+    .pick-card:hover {
+
+      transform:
+        translateY(-8px);
+
+      border-color:
+        rgba(
+          155,
+          124,
+          255,
+          .42
+        );
+
+    }
+
+
+    .pick-card:hover::before {
+
+      transform:
+        scale(1.35);
+
+    }
+
+
+    .pick-top {
+
+      display:
+        flex;
+
+      justify-content:
+        space-between;
+
+      align-items:
+        center;
+
+    }
+
+
+    .pick-index {
+
+      color:
+        #55555e;
+
+      font:
+        9px "Space Mono",
+        monospace;
+
+    }
+
+
+    .pick-icon {
+
+      width:
+        38px;
+
+      height:
+        38px;
+
+      display:
+        grid;
+
+      place-items:
+        center;
+
+      border:
+        1px solid rgba(
+          255,
+          255,
+          255,
+          .12
+        );
+
+      color:
+        var(--cyan);
+
+      font-size:
+        17px;
+
+      background:
+        rgba(
+          255,
+          255,
+          255,
+          .02
+        );
+
+    }
+
+
+    .pick-card h3 {
+
+      margin:
+        55px 0 9px;
+
+      font-size:
+        27px;
+
+      letter-spacing:
+        -.04em;
+
+    }
+
+
+    .pick-card p {
+
+      margin:
+        0;
+
+      color:
+        #797982;
+
+      font-size:
+        13px;
+
+      line-height:
+        1.8;
+
+    }
+
+
+    .pick-link {
+
+      position:
+        absolute;
+
+      left:
+        27px;
+
+      bottom:
+        25px;
+
+      color:
+        #b2b2ba;
+
+      font:
+        9px "Space Mono",
+        monospace;
+
+      letter-spacing:
+        1px;
+
+    }
+
+
+    .pick-link span {
+
+      color:
+        var(--purple);
+
+      margin-left:
+        6px;
+
+    }
+
+
+    /* ==========================================
+       SPECIAL RESOURCE CARD
+    ========================================== */
+
+    .featured-pick {
+
+      display:
+        grid;
+
+      grid-template-columns:
+        1fr 1.3fr;
+
+      gap:
+        35px;
+
+      padding:
+        35px;
+
+      margin-top:
+        20px;
+
+      border:
+        1px solid var(--line);
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(
+            155,
+            124,
+            255,
+            .06
+          ),
+          rgba(
+            94,
+            231,
+            255,
+            .02
+          )
+        );
+
+    }
+
+
+    .featured-pick h3 {
+
+      margin:
+        12px 0;
+
+      font-size:
+        clamp(
+          30px,
+          4vw,
+          55px
+        );
+
+      line-height:
+        .95;
+
+      letter-spacing:
+        -.06em;
+
+    }
+
+
+    .featured-pick p {
+
+      color:
+        #858590;
+
+      font-size:
+        14px;
+
+      line-height:
+        1.9;
+
+    }
+
+
+    .featured-info {
+
+      display:
+        flex;
+
+      flex-direction:
+        column;
+
+      justify-content:
+        center;
+
+    }
+
+
+    .featured-preview {
+
+      min-height:
+        280px;
+
+      display:
+        grid;
+
+      place-items:
+        center;
+
+      position:
+        relative;
+
+      overflow:
+        hidden;
+
+      border:
+        1px solid rgba(
+          255,
+          255,
+          255,
+          .09
+        );
+
+      background:
+        #08080c;
+
+    }
+
+
+    .featured-preview::before {
+
+      content:
+        "RESOURCE";
+
+      position:
+        absolute;
+
+      top:
+        20px;
+
+      left:
+        20px;
+
+      color:
+        #55555e;
+
+      font:
+        8px "Space Mono",
+        monospace;
+
+      letter-spacing:
+        2px;
+
+    }
+
+
+    .featured-logo {
+
+      font-size:
+        68px;
+
+      font-weight:
+        900;
+
+      letter-spacing:
+        -.08em;
+
+      background:
+        linear-gradient(
+          90deg,
+          white,
+          var(--purple),
+          var(--cyan)
+        );
+
+      -webkit-background-clip:
+        text;
+
+      background-clip:
+        text;
+
+      color:
+        transparent;
+
+    }
+
+
+    /* ==========================================
+       FOOTNOTE
+    ========================================== */
+
+    .picks-note {
+
+      margin-top:
+        100px;
+
+      padding-top:
+        30px;
+
+      border-top:
+        1px solid var(--line);
+
+      color:
+        #62626c;
+
+      font:
+        9px/2 "Space Mono",
+        monospace;
+
+      letter-spacing:
+        .5px;
+
+    }
+
+
+    .picks-note strong {
+
+      color:
+        #94949d;
+
+      font-weight:
+        400;
+
+    }
+
+
+    /* ==========================================
+       MOBILE
+    ========================================== */
+
+    @media (max-width: 800px) {
+
+      .picks-page {
+
+        padding:
+          130px 7vw 80px;
+
+      }
+
+
+      .picks-hero {
+
+        padding-bottom:
+          55px;
+
+      }
+
+
+      .picks-hero h1 {
+
+        font-size:
+          25vw;
+
+      }
+
+
+      .pick-grid {
+
+        grid-template-columns:
+          1fr;
+
+      }
+
+
+      .featured-pick {
+
+        grid-template-columns:
+          1fr;
+
+        padding:
+          24px;
+
+      }
+
+
+      .featured-preview {
+
+        min-height:
+          220px;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- Background -->
+
+  <div class="noise"></div>
+
+  <div class="grid-bg"></div>
+
+  <div class="cursor-glow"></div>
+
+
+
+  <!-- =====================================================
+       HEADER
+  ===================================================== -->
+
+  <header class="site-header">
+
+
+    <a
+      class="brand"
+      href="index.html"
+    >
+
+      <span class="brand-mark">
+        AP
+      </span>
+
+
+      <span class="brand-name">
+
+        ANGRY PASSERBY
+
+        <span class="dot">
+          .
+        </span>
+
+      </span>
+
+    </a>
+
+
+
+    <nav class="nav">
+
+
+      <a
+        href="index.html"
+      >
+        HOME
+      </a>
+
+
+      <a
+        href="index.html#about"
+      >
+        ABOUT
+      </a>
+
+
+      <a
+        href="index.html#collection"
+        class="active"
+      >
+        COLLECTION
+      </a>
+
+
+      <a
+        href="index.html#notes"
+      >
+        NOTES
+      </a>
+
+
+    </nav>
+
+
+  </header>
+
+
+
+  <!-- =====================================================
+       MAIN
+  ===================================================== -->
+
+  <main class="picks-page">
+
+
+    <!-- Hero -->
+
+    <section class="picks-hero">
+
+
+      <p class="kicker">
+
+        <span>
+          01
+        </span>
+
+        WEBSITES · TOOLS · RESOURCES
+
+      </p>
+
+
+      <h1>
+
+        MY PICKS
+
+        <span>
+          .
+        </span>
+
+      </h1>
+
+
+      <p>
+
+        这里放一些我自己用过、
+        收藏过，或者觉得值得分享的东西。
+
+        <br>
+
+        好东西不一定要藏在收藏夹里。
+
+      </p>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         AI / TOOLS
+    ================================================== -->
+
+    <section class="pick-category">
+
+
+      <div class="category-title">
+
+
+        <div class="category-number">
+          02
+        </div>
+
+
+        <h2>
+          AI & TOOLS
+        </h2>
+
+
+        <span>
+          USEFUL STUFF
+        </span>
+
+
+      </div>
+
+
+      <div class="pick-grid">
+
+
+        <!-- ChatGPT -->
+
+        <a
+          class="pick-card"
+          href="https://chatgpt.com/"
+          target="_blank"
+          rel="noopener"
+        >
+
+
+          <div class="pick-top">
+
+            <span class="pick-index">
+              001
+            </span>
+
+            <span class="pick-icon">
+              AI
+            </span>
+
+          </div>
+
+
+          <h3>
+            ChatGPT
+          </h3>
+
+
+          <p>
+
+            AI 助手、学习、
+            写作、头脑风暴和各种折腾。
+
+          </p>
+
+
+          <span class="pick-link">
+
+            OPEN WEBSITE
+
+            <span>
+              ↗
+            </span>
+
+          </span>
+
+
+        </a>
+
+
+
+        <!-- GitHub -->
+
+        <a
+          class="pick-card"
+          href="https://github.com/"
+          target="_blank"
+          rel="noopener"
+        >
+
+
+          <div class="pick-top">
+
+            <span class="pick-index">
+              002
+            </span>
+
+            <span class="pick-icon">
+              GH
+            </span>
+
+          </div>
+
+
+          <h3>
+            GitHub
+          </h3>
+
+
+          <p>
+
+            代码、项目、
+            开源社区和自己的数字仓库。
+
+          </p>
+
+
+          <span class="pick-link">
+
+            OPEN WEBSITE
+
+            <span>
+              ↗
+            </span>
+
+          </span>
+
+
+        </a>
+
+
+
+        <!-- Notion -->
+
+        <a
+          class="pick-card"
+          href="https://www.notion.so/"
+          target="_blank"
+          rel="noopener"
+        >
+
+
+          <div class="pick-top">
+
+            <span class="pick-index">
+              003
+            </span>
+
+            <span class="pick-icon">
+              N
+            </span>
+
+          </div>
+
+
+          <h3>
+            Notion
+          </h3>
+
+
+          <p>
+
+            笔记、知识整理、
+            项目管理和个人数据库。
+
+          </p>
+
+
+          <span class="pick-link">
+
+            OPEN WEBSITE
+
+            <span>
+              ↗
+            </span>
+
+          </span>
+
+
+        </a>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         LEARNING
+    ================================================== -->
+
+    <section class="pick-category">
+
+
+      <div class="category-title">
+
+
+        <div class="category-number">
+          03
+        </div>
+
+
+        <h2>
+          LEARNING
+        </h2>
+
+
+        <span>
+          KEEP LEARNING
+        </span>
+
+
+      </div>
+
+
+      <div class="pick-grid">
+
+
+        <!-- MDN -->
+
+        <a
+          class="pick-card"
+          href="https://developer.mozilla.org/"
+          target="_blank"
+          rel="noopener"
+        >
+
+
+          <div class="pick-top">
+
+            <span class="pick-index">
+              004
+            </span>
+
+            <span class="pick-icon">
+              MDN
+            </span>
+
+          </div>
+
+
+          <h3>
+            MDN Web Docs
+          </h3>
+
+
+          <p>
+
+            Web 开发学习、
+            HTML、CSS、JavaScript 参考资料。
+
+          </p>
+
+
+          <span class="pick-link">
+
+            OPEN WEBSITE
+
+            <span>
+              ↗
+            </span>
+
+          </span>
+
+
+        </a>
+
+
+
+        <!-- Roadmap -->
+
+        <a
+          class="pick-card"
+          href="https://roadmap.sh/"
+          target="_blank"
+          rel="noopener"
+        >
+
+
+          <div class="pick-top">
+
+            <span class="pick-index">
+              005
+            </span>
+
+            <span class="pick-icon">
+              →
+            </span>
+
+          </div>
+
+
+          <h3>
+            roadmap.sh
+          </h3>
+
+
+          <p>
+
+            程序员学习路线图，
+            适合寻找学习方向。
+
+          </p>
+
+
+          <span class="pick-link">
+
+            OPEN WEBSITE
+
+            <span>
+              ↗
+            </span>
+
+          </span>
+
+
+        </a>
+
+
+
+        <!-- Wikipedia -->
+
+        <a
+          class="pick-card"
+          href="https://www.wikipedia.org/"
+          target="_blank"
+          rel="noopener"
+        >
+
+
+          <div class="pick-top">
+
+            <span class="pick-index">
+              006
+            </span>
+
+            <span class="pick-icon">
+              W
+            </span>
+
+          </div>
+
+
+          <h3>
+            Wikipedia
+          </h3>
+
+
+          <p>
+
+            查资料、了解概念，
+            从一个词探索整个知识网络。
+
+          </p>
+
+
+          <span class="pick-link">
+
+            OPEN WEBSITE
+
+            <span>
+              ↗
+            </span>
+
+          </span>
+
+
+        </a>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         FEATURED
+    ================================================== -->
+
+    <section class="pick-category">
+
+
+      <div class="category-title">
+
+
+        <div class="category-number">
+          04
+        </div>
+
+
+        <h2>
+          A FEW MORE
+        </h2>
+
+
+        <span>
+          PERSONAL FAVORITES
+        </span>
+
+
+      </div>
+
+
+
+      <a
+        class="featured-pick"
+        href="https://www.figma.com/"
+        target="_blank"
+        rel="noopener"
+      >
+
+
+        <div class="featured-info">
+
+
+          <div class="pick-index">
+            FEATURED · 007
+          </div>
+
+
+          <h3>
+            Figma
+          </h3>
+
+
+          <p>
+
+            一个很适合做界面设计、
+            产品原型和视觉探索的工具。
+
+            以后这个位置也可以换成
+            你自己最喜欢的网站。
+
+          </p>
+
+
+          <span class="pick-link">
+
+            VISIT FIGMA
+
+            <span>
+              ↗
+            </span>
+
+          </span>
+
+
+        </div>
+
+
+
+        <div class="featured-preview">
+
+          <div class="featured-logo">
+            FIGMA
+          </div>
+
+        </div>
+
+
+      </a>
+
+
+    </section>
+
+
+
+    <!-- NOTE -->
+
+    <div class="picks-note">
+
+      <strong>
+        NOTE:
+      </strong>
+
+      这里的推荐来自个人使用、
+      收藏和主观体验。
+
+      网站链接以后可以继续增加，
+      也可以根据你的实际使用情况进行调整。
+
+
+    </div>
+
+
+
+    <!-- Back -->
+
+    <div class="back-home">
+
+      <a
+        href="index.html"
+      >
+
+        ← BACK TO HOME
+
+      </a>
+
+    </div>
+
+
+  </main>
+
+
+
+  <!-- Footer -->
+
+  <footer>
+
+
+    <span>
+
+      © 2026 ANGRY PASSERBY
+
+    </span>
+
+
+    <span>
+
+      angrypasserby.com
+
+    </span>
+
+
+  </footer>
+
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
