@@ -12,11 +12,18 @@
 
   <meta
     name="description"
-    content="Angry Passerby · 生气的路人 · 文章归档"
+    content="Angry Passerby · 生气的路人 · 个人博客文章归档"
   >
 
-  <title>Notes · Angry Passerby</title>
+  <meta
+    name="author"
+    content="Angry Passerby"
+  >
 
+  <title>NOTES · Angry Passerby</title>
+
+
+  <!-- Google Fonts -->
 
   <link
     rel="preconnect"
@@ -34,15 +41,370 @@
     rel="stylesheet"
   >
 
+
+  <!-- Main CSS -->
+
   <link
     rel="stylesheet"
     href="../style.css"
   >
 
+
+  <style>
+
+    /* =====================================================
+       NOTES PAGE
+    ===================================================== */
+
+    .notes-page {
+
+      min-height: 100vh;
+
+      padding:
+        170px 9vw 100px;
+
+    }
+
+
+    /* Hero */
+
+    .notes-hero {
+
+      max-width: 1000px;
+
+      padding-bottom: 90px;
+
+    }
+
+
+    .notes-hero h1 {
+
+      margin:
+        28px 0;
+
+      font-size:
+        clamp(
+          80px,
+          15vw,
+          190px
+        );
+
+      line-height: .8;
+
+      letter-spacing: -.09em;
+
+      font-weight: 900;
+
+    }
+
+
+    .notes-hero h1 span {
+
+      color:
+        var(--purple);
+
+    }
+
+
+    .notes-hero > p:last-child {
+
+      max-width: 600px;
+
+      margin: 0;
+
+      color:
+        #858590;
+
+      font-size: 17px;
+
+      line-height: 1.9;
+
+    }
+
+
+    /* Archive */
+
+    .archive {
+
+      border-top:
+        1px solid var(--line);
+
+    }
+
+
+    .archive-item {
+
+      display: grid;
+
+      grid-template-columns:
+        80px 1fr 140px;
+
+      align-items: center;
+
+      gap: 30px;
+
+      min-height: 220px;
+
+      padding: 35px 0;
+
+      border-bottom:
+        1px solid var(--line);
+
+      transition:
+        .35s ease;
+
+    }
+
+
+    .archive-item:hover {
+
+      padding-left: 22px;
+
+      padding-right: 22px;
+
+      background:
+        rgba(
+          155,
+          124,
+          255,
+          .035
+        );
+
+    }
+
+
+    /* Number */
+
+    .archive-number {
+
+      color:
+        #55555e;
+
+      font:
+        11px "Space Mono",
+        monospace;
+
+      letter-spacing: 1px;
+
+    }
+
+
+    /* Article */
+
+    .archive-info {
+
+      min-width: 0;
+
+    }
+
+
+    .archive-type {
+
+      color:
+        #686871;
+
+      font:
+        9px "Space Mono",
+        monospace;
+
+      letter-spacing: 2px;
+
+    }
+
+
+    .archive-info h2 {
+
+      margin:
+        13px 0 10px;
+
+      font-size:
+        clamp(
+          28px,
+          4vw,
+          48px
+        );
+
+      line-height: 1;
+
+      letter-spacing:
+        -.045em;
+
+    }
+
+
+    .archive-info p {
+
+      margin: 0;
+
+      color:
+        #777780;
+
+      font-size: 13px;
+
+    }
+
+
+    /* Date */
+
+    .archive-date {
+
+      text-align: right;
+
+      color:
+        #666670;
+
+      font:
+        9px "Space Mono",
+        monospace;
+
+      letter-spacing: 1px;
+
+      white-space: nowrap;
+
+    }
+
+
+    .archive-date span {
+
+      display: inline-block;
+
+      margin-left: 10px;
+
+      color:
+        var(--purple);
+
+      font-size: 20px;
+
+      transition:
+        .3s;
+
+    }
+
+
+    .archive-item:hover
+    .archive-date span {
+
+      transform:
+        translate(
+          5px,
+          -5px
+        );
+
+    }
+
+
+    /* Back */
+
+    .back-home {
+
+      margin-top: 55px;
+
+    }
+
+
+    .back-home a {
+
+      color:
+        #888892;
+
+      font:
+        9px "Space Mono",
+        monospace;
+
+      letter-spacing: 1px;
+
+      transition:
+        .2s;
+
+    }
+
+
+    .back-home a:hover {
+
+      color:
+        white;
+
+    }
+
+
+    /* =====================================================
+       MOBILE
+    ===================================================== */
+
+    @media (max-width: 700px) {
+
+      .notes-page {
+
+        padding:
+          130px 7vw 80px;
+
+      }
+
+
+      .notes-hero {
+
+        padding-bottom: 60px;
+
+      }
+
+
+      .notes-hero h1 {
+
+        font-size:
+          25vw;
+
+      }
+
+
+      .archive-item {
+
+        grid-template-columns:
+          40px 1fr;
+
+        gap: 15px;
+
+        min-height: 190px;
+
+        padding:
+          25px 0;
+
+      }
+
+
+      .archive-date {
+
+        grid-column: 2;
+
+        text-align: left;
+
+      }
+
+
+      .archive-info h2 {
+
+        font-size:
+          8vw;
+
+      }
+
+
+      .archive-info p {
+
+        font-size: 12px;
+
+      }
+
+    }
+
+  </style>
+
 </head>
 
 
 <body>
+
+
+  <!-- Background -->
 
   <div class="noise"></div>
 
@@ -52,9 +414,12 @@
 
 
 
-  <!-- Header -->
+  <!-- =====================================================
+       HEADER
+  ====================================================== -->
 
   <header class="site-header">
+
 
     <a
       class="brand"
@@ -65,18 +430,44 @@
         AP
       </span>
 
+
       <span class="brand-name">
-        ANGRY PASSERBY<span class="dot">.</span>
+
+        ANGRY PASSERBY
+
+        <span class="dot">
+          .
+        </span>
+
       </span>
 
     </a>
 
 
+
     <nav class="nav">
 
-      <a href="../index.html">
+
+      <a
+        href="../index.html"
+      >
         HOME
       </a>
+
+
+      <a
+        href="../index.html#about"
+      >
+        ABOUT
+      </a>
+
+
+      <a
+        href="../index.html#projects"
+      >
+        PROJECTS
+      </a>
+
 
       <a
         href="#"
@@ -85,30 +476,31 @@
         NOTES
       </a>
 
-      <a href="../index.html#projects">
-        PROJECTS
-      </a>
-
-      <a href="../index.html#about">
-        ABOUT
-      </a>
 
     </nav>
+
 
   </header>
 
 
 
-  <!-- Main -->
+  <!-- =====================================================
+       MAIN
+  ====================================================== -->
 
   <main class="notes-page">
 
 
+    <!-- Hero -->
+
     <section class="notes-hero">
+
 
       <p class="kicker">
 
-        <span>01</span>
+        <span>
+          01
+        </span>
 
         MY DIGITAL NOTES
 
@@ -118,7 +510,10 @@
       <h1>
 
         NOTES
-        <span>.</span>
+
+        <span>
+          .
+        </span>
 
       </h1>
 
@@ -126,44 +521,66 @@
       <p>
 
         技术、项目、生活，
+
+        <br>
+
         还有一些突然冒出来的想法。
 
       </p>
+
 
     </section>
 
 
 
-    <!-- Article list -->
+    <!-- =================================================
+         ARTICLE ARCHIVE
+    ================================================== -->
 
     <section class="archive">
 
 
-      <!-- Article 01 -->
+      <!-- ===============================================
+           ARTICLE 001
+      ================================================ -->
 
       <a
         class="archive-item"
         href="my-first-site.html"
       >
 
+
         <div class="archive-number">
+
           001
+
         </div>
 
 
         <div class="archive-info">
 
+
           <span class="archive-type">
+
             TECH NOTE
+
           </span>
 
+
           <h2>
+
             我的第一个网站
+
           </h2>
 
+
           <p>
-            从买下域名，到把网站真正放到互联网上。
+
+            从买下域名，
+            到把网站真正放到互联网上。
+
           </p>
+
 
         </div>
 
@@ -178,108 +595,136 @@
 
         </div>
 
+
       </a>
 
 
 
-      <!-- Article 02 -->
+      <!-- ===============================================
+           ARTICLE 002
+      ================================================ -->
 
-      <a
+      <div
         class="archive-item"
-        href="#"
       >
 
+
         <div class="archive-number">
+
           002
+
         </div>
 
 
         <div class="archive-info">
 
+
           <span class="archive-type">
+
             THOUGHT
+
           </span>
 
+
           <h2>
+
             为什么我开始写博客？
+
           </h2>
 
+
           <p>
+
             给自己的互联网生活留下一点记录。
+
           </p>
+
 
         </div>
 
 
         <div class="archive-date">
 
-          SOON
-
-          <span>
-            ↗
-          </span>
+          COMING SOON
 
         </div>
 
-      </a>
+
+      </div>
 
 
 
-      <!-- Article 03 -->
+      <!-- ===============================================
+           ARTICLE 003
+      ================================================ -->
 
-      <a
+      <div
         class="archive-item"
-        href="#"
       >
 
+
         <div class="archive-number">
+
           003
+
         </div>
 
 
         <div class="archive-info">
 
+
           <span class="archive-type">
+
             EXPERIMENT
+
           </span>
 
+
           <h2>
+
             下一次折腾什么？
+
           </h2>
 
+
           <p>
-            AI、自动化、编程，以及一些奇怪的想法。
+
+            AI、自动化、编程，
+            以及一些奇怪的想法。
+
           </p>
+
 
         </div>
 
 
         <div class="archive-date">
 
-          SOON
-
-          <span>
-            ↗
-          </span>
+          COMING SOON
 
         </div>
 
-      </a>
+
+      </div>
 
 
     </section>
 
 
 
-    <!-- Back -->
+    <!-- Back Home -->
 
     <div class="back-home">
 
-      <a href="../index.html">
+
+      <a
+        href="../index.html"
+      >
 
         ← BACK TO HOME
 
       </a>
+
 
     </div>
 
@@ -288,19 +733,32 @@
 
 
 
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+
   <footer>
 
-    <span>
-      © 2026 ANGRY PASSERBY
-    </span>
 
     <span>
-      angrypass﻿erby.com
+
+      © 2026 ANGRY PASSERBY
+
     </span>
+
+
+    <span>
+
+      angrypasserby.com
+
+    </span>
+
 
   </footer>
 
 
+
+  <!-- JavaScript -->
 
   <script src="../script.js"></script>
 

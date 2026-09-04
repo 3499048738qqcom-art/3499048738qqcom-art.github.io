@@ -1,0 +1,834 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Smart Sorting System · Angry Passerby"
+  >
+
+  <title>Smart Sorting System · Angry Passerby</title>
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="../style.css"
+  >
+
+  <style>
+
+    .project-page {
+      min-height: 100vh;
+      padding: 160px 9vw 120px;
+    }
+
+
+    .project-header {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+
+    .project-meta {
+      font:
+        10px "Space Mono",
+        monospace;
+
+      letter-spacing: 2px;
+
+      color: #777780;
+    }
+
+
+    .project-meta span {
+      color: #9b7cff;
+    }
+
+
+    .project-title {
+      margin: 30px 0 20px;
+
+      font-size:
+        clamp(55px, 9vw, 125px);
+
+      line-height: .82;
+
+      letter-spacing: -.08em;
+    }
+
+
+    .project-title span {
+      color: #777780;
+    }
+
+
+    .project-lead {
+      max-width: 700px;
+
+      color: #92929b;
+
+      font-size: 18px;
+
+      line-height: 1.9;
+    }
+
+
+    .project-cover {
+      margin: 80px auto;
+
+      max-width: 1100px;
+
+      min-height: 420px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      position: relative;
+
+      overflow: hidden;
+
+      border:
+        1px solid rgba(255,255,255,.11);
+
+      background:
+        radial-gradient(
+          circle at 50% 45%,
+          rgba(155,124,255,.18),
+          transparent 28%
+        ),
+        linear-gradient(
+          135deg,
+          #0b0b12,
+          #050507
+        );
+    }
+
+
+    .project-cover::before {
+      content: "";
+
+      position: absolute;
+
+      width: 500px;
+      height: 500px;
+
+      border-radius: 50%;
+
+      border:
+        1px solid rgba(155,124,255,.18);
+
+      transform:
+        scaleY(.35)
+        rotate(-15deg);
+    }
+
+
+    .project-cover::after {
+      content: "AUTOMATION / ROBOTICS";
+
+      position: absolute;
+
+      top: 25px;
+      left: 30px;
+
+      font:
+        9px "Space Mono",
+        monospace;
+
+      letter-spacing: 2px;
+
+      color: #686871;
+    }
+
+
+    .cover-center {
+      position: relative;
+
+      text-align: center;
+
+      z-index: 1;
+    }
+
+
+    .cover-icon {
+      font-size: 80px;
+
+      filter:
+        drop-shadow(
+          0 0 25px rgba(155,124,255,.4)
+        );
+    }
+
+
+    .cover-center h2 {
+      margin: 10px 0;
+
+      font-size: 25px;
+
+      letter-spacing: 3px;
+    }
+
+
+    .cover-center p {
+      color: #777780;
+
+      font:
+        9px "Space Mono",
+        monospace;
+
+      letter-spacing: 2px;
+    }
+
+
+    .project-content {
+      max-width: 850px;
+
+      margin: 0 auto;
+    }
+
+
+    .project-section {
+      margin-top: 90px;
+    }
+
+
+    .project-section-label {
+      margin-bottom: 20px;
+
+      color: #9b7cff;
+
+      font:
+        9px "Space Mono",
+        monospace;
+
+      letter-spacing: 2px;
+    }
+
+
+    .project-section h2 {
+      margin: 0 0 25px;
+
+      font-size: 38px;
+
+      line-height: 1.1;
+
+      letter-spacing: -.04em;
+    }
+
+
+    .project-section p {
+      color: #9999a2;
+
+      font-size: 16px;
+
+      line-height: 2;
+    }
+
+
+    .tech-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      gap: 12px;
+
+      margin-top: 30px;
+    }
+
+
+    .tech-item {
+      padding: 18px;
+
+      border:
+        1px solid rgba(255,255,255,.1);
+
+      background:
+        rgba(255,255,255,.02);
+    }
+
+
+    .tech-item strong {
+      display: block;
+
+      font-size: 16px;
+
+      margin-bottom: 5px;
+    }
+
+
+    .tech-item span {
+      color: #707078;
+
+      font-size: 12px;
+    }
+
+
+    .process {
+      margin-top: 30px;
+
+      border-top:
+        1px solid rgba(255,255,255,.1);
+    }
+
+
+    .process-item {
+      display: grid;
+
+      grid-template-columns: 70px 1fr;
+
+      gap: 20px;
+
+      padding: 25px 0;
+
+      border-bottom:
+        1px solid rgba(255,255,255,.1);
+    }
+
+
+    .process-number {
+      color: #9b7cff;
+
+      font:
+        10px "Space Mono",
+        monospace;
+    }
+
+
+    .process-item h3 {
+      margin: 0 0 8px;
+
+      font-size: 20px;
+    }
+
+
+    .process-item p {
+      margin: 0;
+
+      font-size: 14px;
+    }
+
+
+    .project-back {
+      display: inline-block;
+
+      margin-top: 100px;
+
+      color: #aaaab2;
+
+      font:
+        9px "Space Mono",
+        monospace;
+
+      letter-spacing: 1px;
+    }
+
+
+    .project-back:hover {
+      color: white;
+    }
+
+
+    @media (max-width: 700px) {
+
+      .project-page {
+        padding:
+          125px 7vw 80px;
+      }
+
+
+      .project-title {
+        font-size: 21vw;
+      }
+
+
+      .project-cover {
+        min-height: 300px;
+
+        margin: 55px auto;
+      }
+
+
+      .tech-grid {
+        grid-template-columns: 1fr;
+      }
+
+
+      .process-item {
+        grid-template-columns:
+          40px 1fr;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+  <div class="noise"></div>
+
+  <div class="grid-bg"></div>
+
+  <div class="cursor-glow"></div>
+
+
+  <!-- Header -->
+
+  <header class="site-header">
+
+    <a
+      class="brand"
+      href="../index.html"
+    >
+
+      <span class="brand-mark">
+        AP
+      </span>
+
+      <span class="brand-name">
+        ANGRY PASSERBY<span class="dot">.</span>
+      </span>
+
+    </a>
+
+
+    <nav class="nav">
+
+      <a href="../index.html">
+        HOME
+      </a>
+
+      <a href="../index.html#about">
+        ABOUT
+      </a>
+
+      <a
+        href="../index.html#projects"
+        class="active"
+      >
+        PROJECTS
+      </a>
+
+      <a href="../index.html#notes">
+        NOTES
+      </a>
+
+    </nav>
+
+  </header>
+
+
+
+  <main class="project-page">
+
+
+    <!-- Header -->
+
+    <header class="project-header">
+
+      <div class="project-meta">
+
+        <span>001</span>
+
+        PROJECT · AUTOMATION / ROBOTICS
+
+      </div>
+
+
+      <h1 class="project-title">
+
+        SMART SORTING
+
+        <br>
+
+        <span>SYSTEM</span>
+
+      </h1>
+
+
+      <p class="project-lead">
+
+        基于工业机器人、PLC、RFID 与 RobotStudio
+        构建的智能物流分拣搬运仿真系统。
+
+      </p>
+
+    </header>
+
+
+
+    <!-- Cover -->
+
+    <div class="project-cover">
+
+      <div class="cover-center">
+
+        <div class="cover-icon">
+          ⚙
+        </div>
+
+        <h2>
+          SMART SORTING
+        </h2>
+
+        <p>
+          PLC · ROBOT · RFID · SIMULATION
+        </p>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- Content -->
+
+    <article class="project-content">
+
+
+      <!-- Overview -->
+
+      <section class="project-section">
+
+        <div class="project-section-label">
+          01 · OVERVIEW
+        </div>
+
+        <h2>
+          一个自动化物流分拣系统。
+        </h2>
+
+        <p>
+
+          本项目面向智能物流自动化场景，
+          通过工业机器人与 PLC 协同控制，
+          对不同类型的物料进行识别、
+          分拣和搬运。
+
+        </p>
+
+        <p>
+
+          系统使用 RobotStudio
+          搭建虚拟工作站，通过 RFID
+          实现物料识别，并使用 PLC
+          对整个系统的运行逻辑进行控制。
+
+        </p>
+
+      </section>
+
+
+
+      <!-- Technology -->
+
+      <section class="project-section">
+
+        <div class="project-section-label">
+          02 · TECHNOLOGY
+        </div>
+
+        <h2>
+          技术栈
+        </h2>
+
+
+        <div class="tech-grid">
+
+
+          <div class="tech-item">
+
+            <strong>
+              ABB Industrial Robot
+            </strong>
+
+            <span>
+              机器人运动与物料搬运
+            </span>
+
+          </div>
+
+
+          <div class="tech-item">
+
+            <strong>
+              Siemens S7-1500
+            </strong>
+
+            <span>
+              PLC 控制平台
+            </span>
+
+          </div>
+
+
+          <div class="tech-item">
+
+            <strong>
+              TIA Portal
+            </strong>
+
+            <span>
+              PLC 程序设计与逻辑控制
+            </span>
+
+          </div>
+
+
+          <div class="tech-item">
+
+            <strong>
+              RobotStudio
+            </strong>
+
+            <span>
+              虚拟工作站与机器人仿真
+            </span>
+
+          </div>
+
+
+          <div class="tech-item">
+
+            <strong>
+              RFID
+            </strong>
+
+            <span>
+              自动识别与物料分类
+            </span>
+
+          </div>
+
+
+          <div class="tech-item">
+
+            <strong>
+              HMI
+            </strong>
+
+            <span>
+              手动操作与运行状态监控
+            </span>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+
+      <!-- Process -->
+
+      <section class="project-section">
+
+        <div class="project-section-label">
+          03 · WORKFLOW
+        </div>
+
+        <h2>
+          系统运行流程
+        </h2>
+
+
+        <div class="process">
+
+
+          <div class="process-item">
+
+            <div class="process-number">
+              01
+            </div>
+
+            <div>
+
+              <h3>
+                物料生成
+              </h3>
+
+              <p>
+                系统生成待分拣物料并进入输送流程。
+              </p>
+
+            </div>
+
+          </div>
+
+
+
+          <div class="process-item">
+
+            <div class="process-number">
+              02
+            </div>
+
+            <div>
+
+              <h3>
+                RFID 识别
+              </h3>
+
+              <p>
+                读取物料信息并确定对应的分拣类别。
+              </p>
+
+            </div>
+
+          </div>
+
+
+
+          <div class="process-item">
+
+            <div class="process-number">
+              03
+            </div>
+
+            <div>
+
+              <h3>
+                PLC 逻辑控制
+              </h3>
+
+              <p>
+                PLC 根据传感器和识别结果控制输送、
+                推料以及机器人动作。
+              </p>
+
+            </div>
+
+          </div>
+
+
+
+          <div class="process-item">
+
+            <div class="process-number">
+              04
+            </div>
+
+            <div>
+
+              <h3>
+                Robot 搬运
+              </h3>
+
+              <p>
+                ABB 工业机器人完成抓取、
+                搬运和目标位置放置。
+              </p>
+
+            </div>
+
+          </div>
+
+
+
+          <div class="process-item">
+
+            <div class="process-number">
+              05
+            </div>
+
+            <div>
+
+              <h3>
+                状态监控
+              </h3>
+
+              <p>
+                HMI 提供手动操作、调试以及系统状态监控。
+              </p>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </section>
+
+
+
+      <!-- Result -->
+
+      <section class="project-section">
+
+        <div class="project-section-label">
+          04 · RESULT
+        </div>
+
+        <h2>
+          从仿真开始理解真实自动化。
+        </h2>
+
+        <p>
+
+          通过虚拟仿真，可以在实际设备投入之前
+          对机器人路径、控制逻辑和系统动作进行验证。
+
+        </p>
+
+        <p>
+
+          这个项目也让我第一次真正把
+          PLC、机器人、RFID、HMI
+          和仿真环境放在同一个系统里思考。
+
+        </p>
+
+      </section>
+
+
+
+      <a
+        class="project-back"
+        href="../index.html#projects"
+      >
+
+        ← BACK TO PROJECTS
+
+      </a>
+
+    </article>
+
+  </main>
+
+
+
+  <script src="../script.js"></script>
+
+</body>
+
+</html>
