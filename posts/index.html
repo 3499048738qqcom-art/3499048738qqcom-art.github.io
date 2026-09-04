@@ -12,7 +12,7 @@
 
   <meta
     name="description"
-    content="Angry Passerby · 生气的路人 · 个人博客文章归档"
+    content="ANGRY PASSERBY · 生气的路人 — 个人积累、网站推荐、资源分享与随想"
   >
 
   <meta
@@ -20,10 +20,10 @@
     content="Angry Passerby"
   >
 
-  <title>NOTES · Angry Passerby</title>
+  <title>
+    ANGRY PASSERBY · 生气的路人
+  </title>
 
-
-  <!-- Google Fonts -->
 
   <link
     rel="preconnect"
@@ -42,369 +42,16 @@
   >
 
 
-  <!-- Main CSS -->
-
   <link
     rel="stylesheet"
-    href="../style.css"
+    href="style.css"
   >
-
-
-  <style>
-
-    /* =====================================================
-       NOTES PAGE
-    ===================================================== */
-
-    .notes-page {
-
-      min-height: 100vh;
-
-      padding:
-        170px 9vw 100px;
-
-    }
-
-
-    /* Hero */
-
-    .notes-hero {
-
-      max-width: 1000px;
-
-      padding-bottom: 90px;
-
-    }
-
-
-    .notes-hero h1 {
-
-      margin:
-        28px 0;
-
-      font-size:
-        clamp(
-          80px,
-          15vw,
-          190px
-        );
-
-      line-height: .8;
-
-      letter-spacing: -.09em;
-
-      font-weight: 900;
-
-    }
-
-
-    .notes-hero h1 span {
-
-      color:
-        var(--purple);
-
-    }
-
-
-    .notes-hero > p:last-child {
-
-      max-width: 600px;
-
-      margin: 0;
-
-      color:
-        #858590;
-
-      font-size: 17px;
-
-      line-height: 1.9;
-
-    }
-
-
-    /* Archive */
-
-    .archive {
-
-      border-top:
-        1px solid var(--line);
-
-    }
-
-
-    .archive-item {
-
-      display: grid;
-
-      grid-template-columns:
-        80px 1fr 140px;
-
-      align-items: center;
-
-      gap: 30px;
-
-      min-height: 220px;
-
-      padding: 35px 0;
-
-      border-bottom:
-        1px solid var(--line);
-
-      transition:
-        .35s ease;
-
-    }
-
-
-    .archive-item:hover {
-
-      padding-left: 22px;
-
-      padding-right: 22px;
-
-      background:
-        rgba(
-          155,
-          124,
-          255,
-          .035
-        );
-
-    }
-
-
-    /* Number */
-
-    .archive-number {
-
-      color:
-        #55555e;
-
-      font:
-        11px "Space Mono",
-        monospace;
-
-      letter-spacing: 1px;
-
-    }
-
-
-    /* Article */
-
-    .archive-info {
-
-      min-width: 0;
-
-    }
-
-
-    .archive-type {
-
-      color:
-        #686871;
-
-      font:
-        9px "Space Mono",
-        monospace;
-
-      letter-spacing: 2px;
-
-    }
-
-
-    .archive-info h2 {
-
-      margin:
-        13px 0 10px;
-
-      font-size:
-        clamp(
-          28px,
-          4vw,
-          48px
-        );
-
-      line-height: 1;
-
-      letter-spacing:
-        -.045em;
-
-    }
-
-
-    .archive-info p {
-
-      margin: 0;
-
-      color:
-        #777780;
-
-      font-size: 13px;
-
-    }
-
-
-    /* Date */
-
-    .archive-date {
-
-      text-align: right;
-
-      color:
-        #666670;
-
-      font:
-        9px "Space Mono",
-        monospace;
-
-      letter-spacing: 1px;
-
-      white-space: nowrap;
-
-    }
-
-
-    .archive-date span {
-
-      display: inline-block;
-
-      margin-left: 10px;
-
-      color:
-        var(--purple);
-
-      font-size: 20px;
-
-      transition:
-        .3s;
-
-    }
-
-
-    .archive-item:hover
-    .archive-date span {
-
-      transform:
-        translate(
-          5px,
-          -5px
-        );
-
-    }
-
-
-    /* Back */
-
-    .back-home {
-
-      margin-top: 55px;
-
-    }
-
-
-    .back-home a {
-
-      color:
-        #888892;
-
-      font:
-        9px "Space Mono",
-        monospace;
-
-      letter-spacing: 1px;
-
-      transition:
-        .2s;
-
-    }
-
-
-    .back-home a:hover {
-
-      color:
-        white;
-
-    }
-
-
-    /* =====================================================
-       MOBILE
-    ===================================================== */
-
-    @media (max-width: 700px) {
-
-      .notes-page {
-
-        padding:
-          130px 7vw 80px;
-
-      }
-
-
-      .notes-hero {
-
-        padding-bottom: 60px;
-
-      }
-
-
-      .notes-hero h1 {
-
-        font-size:
-          25vw;
-
-      }
-
-
-      .archive-item {
-
-        grid-template-columns:
-          40px 1fr;
-
-        gap: 15px;
-
-        min-height: 190px;
-
-        padding:
-          25px 0;
-
-      }
-
-
-      .archive-date {
-
-        grid-column: 2;
-
-        text-align: left;
-
-      }
-
-
-      .archive-info h2 {
-
-        font-size:
-          8vw;
-
-      }
-
-
-      .archive-info p {
-
-        font-size: 12px;
-
-      }
-
-    }
-
-  </style>
 
 </head>
 
 
 <body>
 
-
-  <!-- Background -->
 
   <div class="noise"></div>
 
@@ -414,22 +61,18 @@
 
 
 
-  <!-- =====================================================
-       HEADER
-  ====================================================== -->
+  <!-- HEADER -->
 
   <header class="site-header">
 
-
     <a
       class="brand"
-      href="../index.html"
+      href="#home"
     >
 
       <span class="brand-mark">
         AP
       </span>
-
 
       <span class="brand-name">
 
@@ -444,265 +87,686 @@
     </a>
 
 
-
     <nav class="nav">
 
-
       <a
-        href="../index.html"
+        class="active"
+        href="#home"
       >
         HOME
       </a>
 
-
-      <a
-        href="../index.html#about"
-      >
+      <a href="#about">
         ABOUT
       </a>
 
-
-      <a
-        href="../index.html#projects"
-      >
-        PROJECTS
+      <a href="#collection">
+        COLLECTION
       </a>
 
-
-      <a
-        href="#"
-        class="active"
-      >
+      <a href="#notes">
         NOTES
       </a>
 
-
     </nav>
 
+
+    <a
+      class="header-status"
+      href="#contact"
+    >
+
+      <span class="status-dot"></span>
+
+      ONLINE
+
+    </a>
 
   </header>
 
 
 
-  <!-- =====================================================
-       MAIN
-  ====================================================== -->
+  <!-- MAIN -->
 
-  <main class="notes-page">
+  <main id="home">
 
 
-    <!-- Hero -->
+    <!-- HERO -->
 
-    <section class="notes-hero">
+    <section class="hero section-pad">
 
 
-      <p class="kicker">
+      <div class="hero-copy reveal">
+
+
+        <p class="kicker">
+
+          <span>
+            01
+          </span>
+
+          PERSONAL DIGITAL SPACE
+
+        </p>
+
+
+        <h1>
+
+          <span class="line">
+            ANGRY
+          </span>
+
+          <span class="line accent">
+
+            PASSERBY
+
+            <span class="cursor">
+              _
+            </span>
+
+          </span>
+
+        </h1>
+
+
+        <p class="hero-cn">
+          生气的路人
+        </p>
+
+
+        <p class="hero-desc">
+
+          记录我学到的、用过的、
+
+          <br>
+
+          收藏的，以及值得分享的。
+
+        </p>
+
+
+        <div class="hero-actions">
+
+
+          <a
+            class="btn btn-main"
+            href="#collection"
+          >
+
+            EXPLORE
+
+            <span>
+              ↗
+            </span>
+
+          </a>
+
+
+          <a
+            class="text-link"
+            href="#about"
+          >
+
+            ABOUT ME
+
+            <span>
+              ↓
+            </span>
+
+          </a>
+
+
+        </div>
+
+
+      </div>
+
+
+
+      <div class="hero-side reveal delay-1">
+
+
+        <div class="orb-wrap">
+
+          <div class="orb"></div>
+
+          <div class="orb-ring ring-a"></div>
+
+          <div class="orb-ring ring-b"></div>
+
+
+          <span class="orb-label label-a">
+            LEARN
+          </span>
+
+          <span class="orb-label label-b">
+            SAVE
+          </span>
+
+          <span class="orb-label label-c">
+            SHARE
+          </span>
+
+        </div>
+
+
+        <div class="mini-terminal">
+
+
+          <div class="terminal-top">
+
+            <span></span>
+
+            <span></span>
+
+            <span></span>
+
+            <b>
+              guest@angrypasserby
+            </b>
+
+          </div>
+
+
+          <div class="terminal-body">
+
+
+            <p>
+
+              <i>
+                ~
+              </i>
+
+              whoami
+
+            </p>
+
+
+            <p class="terminal-output">
+
+              just a passerby.
+
+            </p>
+
+
+            <p>
+
+              <i>
+                ~
+              </i>
+
+              mission
+
+            </p>
+
+
+            <p class="terminal-output live">
+
+              ● learn · collect · share
+
+            </p>
+
+
+            <p>
+
+              <i>
+                ~
+              </i>
+
+              <span class="blink">
+                _
+              </span>
+
+            </p>
+
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+      <div class="hero-scroll">
+
+        SCROLL TO EXPLORE
 
         <span>
-          01
+          ↓
         </span>
 
-        MY DIGITAL NOTES
-
-      </p>
-
-
-      <h1>
-
-        NOTES
-
-        <span>
-          .
-        </span>
-
-      </h1>
-
-
-      <p>
-
-        技术、项目、生活，
-
-        <br>
-
-        还有一些突然冒出来的想法。
-
-      </p>
+      </div>
 
 
     </section>
 
 
 
-    <!-- =================================================
-         ARTICLE ARCHIVE
-    ================================================== -->
+    <!-- ABOUT -->
 
-    <section class="archive">
-
-
-      <!-- ===============================================
-           ARTICLE 001
-      ================================================ -->
-
-      <a
-        class="archive-item"
-        href="my-first-site.html"
-      >
+    <section
+      id="about"
+      class="about section-pad"
+    >
 
 
-        <div class="archive-number">
+      <div class="section-label reveal">
 
-          001
+        <span>
+          02
+        </span>
+
+        ABOUT THE PASSERBY
+
+      </div>
+
+
+      <div class="about-grid">
+
+
+        <div class="about-title reveal">
+
+          <p class="eyebrow">
+
+            NICE TO MEET YOU.
+
+          </p>
+
+
+          <h2>
+
+            不一定懂很多，
+
+            <br>
+
+            但喜欢
+
+            <em>
+              折腾。
+            </em>
+
+          </h2>
 
         </div>
 
 
-        <div class="archive-info">
+        <div class="about-text reveal delay-1">
 
 
-          <span class="archive-type">
+          <p class="big-text">
 
+            这里不是一个完美的个人主页。
+
+            <br>
+
+            更像是我的数字小窝。
+
+          </p>
+
+
+          <p>
+
+            我会把自己学习过程中遇到的东西、
+            使用过的工具、收藏的网站、
+            一些经验和想法记录在这里。
+
+          </p>
+
+
+          <p>
+
+            好东西不应该只放在自己的收藏夹里。
+
+            <br>
+
+            所以也分享给路过这里的人。
+
+          </p>
+
+
+          <div class="stats">
+
+
+            <div>
+
+              <strong>
+                ∞
+              </strong>
+
+              <span>
+                DISCOVER
+              </span>
+
+            </div>
+
+
+            <div>
+
+              <strong>
+                24/7
+              </strong>
+
+              <span>
+                CURIOUS
+              </span>
+
+            </div>
+
+
+            <div>
+
+              <strong>
+                01
+              </strong>
+
+              <span>
+                PASSERBY
+              </span>
+
+            </div>
+
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- COLLECTION -->
+
+    <section
+      id="collection"
+      class="projects section-pad"
+    >
+
+
+      <div class="section-label reveal">
+
+        <span>
+          03
+        </span>
+
+        MY COLLECTION
+
+      </div>
+
+
+      <div class="project-list">
+
+
+        <!-- PERSONAL NOTES -->
+
+        <a
+          class="project-card reveal"
+          href="posts/index.html"
+        >
+
+
+          <div class="project-no">
+            001
+          </div>
+
+
+          <div class="project-main">
+
+
+            <p>
+              PERSONAL NOTES
+            </p>
+
+
+            <h3>
+
+              MY
+
+              <br>
+
+              <span>
+                COLLECTION
+              </span>
+
+            </h3>
+
+
+            <span class="project-desc">
+
+              我的积累 · 学习记录 · 经验分享
+
+            </span>
+
+
+          </div>
+
+
+          <div class="project-arrow">
+            ↗
+          </div>
+
+
+        </a>
+
+
+
+        <!-- WEBSITE PICKS -->
+
+        <a
+          class="project-card reveal delay-1"
+          href="picks.html"
+        >
+
+
+          <div class="project-no">
+            002
+          </div>
+
+
+          <div class="project-main">
+
+
+            <p>
+              WEBSITE / RESOURCE PICKS
+            </p>
+
+
+            <h3>
+
+              MY
+
+              <br>
+
+              <span>
+                PICKS
+              </span>
+
+            </h3>
+
+
+            <span class="project-desc">
+
+              网站 · 工具 · 资源 · 收藏推荐
+
+            </span>
+
+
+          </div>
+
+
+          <div class="project-arrow">
+            ↗
+          </div>
+
+
+        </a>
+
+
+
+        <!-- THOUGHTS -->
+
+        <a
+          class="project-card reveal delay-2"
+          href="posts/index.html"
+        >
+
+
+          <div class="project-no">
+            003
+          </div>
+
+
+          <div class="project-main">
+
+
+            <p>
+              LIFE / THOUGHTS
+            </p>
+
+
+            <h3>
+
+              RANDOM
+
+              <br>
+
+              <span>
+                THOUGHTS
+              </span>
+
+            </h3>
+
+
+            <span class="project-desc">
+
+              随想 · 生活 · 一些奇奇怪怪的想法
+
+            </span>
+
+
+          </div>
+
+
+          <div class="project-arrow">
+            ↗
+          </div>
+
+
+        </a>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- NOTES -->
+
+    <section
+      id="notes"
+      class="notes section-pad"
+    >
+
+
+      <div class="section-label reveal">
+
+        <span>
+          04
+        </span>
+
+        RECENT NOTES
+
+      </div>
+
+
+      <div class="notes-grid">
+
+
+        <article class="note-card reveal">
+
+
+          <span class="note-type">
             TECH NOTE
-
           </span>
 
 
-          <h2>
+          <span class="note-date">
+            2026.09
+          </span>
+
+
+          <h3>
 
             我的第一个网站
 
-          </h2>
+          </h3>
 
 
           <p>
 
-            从买下域名，
-            到把网站真正放到互联网上。
+            从购买域名开始，
+            一步一步把自己的个人网站真正放到互联网上。
 
           </p>
 
 
-        </div>
+          <a
+            href="posts/my-first-site.html"
+          >
+
+            READ NOTE ↗
+
+          </a>
 
 
-        <div class="archive-date">
-
-          2026.09
-
-          <span>
-            ↗
-          </span>
-
-        </div>
-
-
-      </a>
+        </article>
 
 
 
-      <!-- ===============================================
-           ARTICLE 002
-      ================================================ -->
-
-      <div
-        class="archive-item"
-      >
+        <article class="note-card reveal delay-1">
 
 
-        <div class="archive-number">
-
-          002
-
-        </div>
-
-
-        <div class="archive-info">
-
-
-          <span class="archive-type">
-
-            THOUGHT
-
+          <span class="note-type">
+            RESOURCE
           </span>
 
 
-          <h2>
+          <span class="note-date">
+            SOON
+          </span>
 
-            为什么我开始写博客？
 
-          </h2>
+          <h3>
+
+            最近发现的好网站
+
+          </h3>
 
 
           <p>
 
-            给自己的互联网生活留下一点记录。
+            收藏一些我觉得值得保存、
+            使用和分享的网站与工具。
 
           </p>
 
 
-        </div>
+          <a href="picks.html">
+
+            VIEW PICKS ↗
+
+          </a>
 
 
-        <div class="archive-date">
-
-          COMING SOON
-
-        </div>
-
-
-      </div>
-
-
-
-      <!-- ===============================================
-           ARTICLE 003
-      ================================================ -->
-
-      <div
-        class="archive-item"
-      >
-
-
-        <div class="archive-number">
-
-          003
-
-        </div>
-
-
-        <div class="archive-info">
-
-
-          <span class="archive-type">
-
-            EXPERIMENT
-
-          </span>
-
-
-          <h2>
-
-            下一次折腾什么？
-
-          </h2>
-
-
-          <p>
-
-            AI、自动化、编程，
-            以及一些奇怪的想法。
-
-          </p>
-
-
-        </div>
-
-
-        <div class="archive-date">
-
-          COMING SOON
-
-        </div>
+        </article>
 
 
       </div>
@@ -712,30 +776,96 @@
 
 
 
-    <!-- Back Home -->
+    <!-- CONTACT -->
 
-    <div class="back-home">
-
-
-      <a
-        href="../index.html"
-      >
-
-        ← BACK TO HOME
-
-      </a>
+    <section
+      id="contact"
+      class="contact section-pad"
+    >
 
 
-    </div>
+      <div class="contact-inner reveal">
+
+
+        <p class="kicker">
+
+          <span>
+            05
+          </span>
+
+          END OF THE PAGE
+
+        </p>
+
+
+        <h2>
+
+          STAY
+
+          <br>
+
+          <span>
+            CURIOUS.
+          </span>
+
+        </h2>
+
+
+        <p>
+
+          路过这里，
+
+          <br>
+
+          希望你能找到一点有用的东西。
+
+        </p>
+
+
+        <div class="contact-links">
+
+
+          <a
+            href="https://github.com/"
+            target="_blank"
+            rel="noopener"
+          >
+
+            GITHUB ↗
+
+          </a>
+
+
+          <a
+            href="mailto:hello@angrypasserby.com"
+          >
+
+            EMAIL ↗
+
+          </a>
+
+
+          <a href="#home">
+
+            BACK TO TOP ↑
+
+          </a>
+
+
+        </div>
+
+
+      </div>
+
+
+    </section>
 
 
   </main>
 
 
 
-  <!-- =====================================================
-       FOOTER
-  ====================================================== -->
+  <!-- FOOTER -->
 
   <footer>
 
@@ -758,9 +888,7 @@
 
 
 
-  <!-- JavaScript -->
-
-  <script src="../script.js"></script>
+  <script src="script.js"></script>
 
 </body>
 
