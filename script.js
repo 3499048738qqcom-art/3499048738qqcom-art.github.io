@@ -9,10 +9,13 @@
 ===================================================== */
 
 const glow = document.querySelector(".cursor-glow");
+const reduceMotion = window.matchMedia(
+  "(prefers-reduced-motion: reduce)"
+).matches;
 
 window.addEventListener("pointermove", (event) => {
 
-  if (!glow) return;
+  if (!glow || reduceMotion) return;
 
   glow.style.left = `${event.clientX}px`;
 
@@ -25,35 +28,42 @@ window.addEventListener("pointermove", (event) => {
    2. 滚动出现动画
 ===================================================== */
 
-const revealObserver = new IntersectionObserver(
-  (entries) => {
+const revealElements = document.querySelectorAll(".reveal");
 
-    entries.forEach((entry) => {
+const revealObserver =
+  "IntersectionObserver" in window
+    ? new IntersectionObserver(
+        (entries) => {
 
-      if (entry.isIntersecting) {
+          entries.forEach((entry) => {
 
-        entry.target.classList.add("visible");
+            if (entry.isIntersecting) {
 
-        revealObserver.unobserve(entry.target);
+              entry.target.classList.add("visible");
 
-      }
+              revealObserver.unobserve(entry.target);
 
-    });
+            }
 
-  },
-  {
-    threshold: 0.12
-  }
-);
+          });
+
+        },
+        {
+          threshold: 0.12
+        }
+      )
+    : null;
 
 
-document
-  .querySelectorAll(".reveal")
-  .forEach((element) => {
+revealElements.forEach((element) => {
 
+  if (revealObserver) {
     revealObserver.observe(element);
+  } else {
+    element.classList.add("visible");
+  }
 
-  });
+});
 
 
 /* =====================================================
@@ -109,17 +119,17 @@ function updateNavigation() {
 }
 
 
-window.addEventListener(
-  "scroll",
-  updateNavigation,
-  {
-    passive: true
-  }
-);
+if (sections.length) {
+  window.addEventListener(
+    "scroll",
+    updateNavigation,
+    {
+      passive: true
+    }
+  );
 
-
-updateNavigation();
-
+  updateNavigation();
+}
 
 /* =====================================================
    4. 鼠标悬停项目时增加轻微效果
@@ -136,6 +146,8 @@ projectCards.forEach((card) => {
   card.addEventListener(
     "mousemove",
     (event) => {
+
+      if (reduceMotion) return;
 
       const rect =
         card.getBoundingClientRect();
