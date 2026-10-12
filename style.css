@@ -1200,18 +1200,21 @@ footer {
 ===================================================== */
 
 .reveal {
-  opacity: 0;
-
-  transform:
-    translateY(24px);
-
   transition:
     opacity 0.8s ease,
     transform 0.8s ease;
 }
 
 
-.reveal.visible {
+html.js .reveal {
+  opacity: 0;
+
+  transform:
+    translateY(24px);
+}
+
+
+html.js .reveal.visible {
   opacity: 1;
 
   transform:

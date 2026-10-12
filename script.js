@@ -3,15 +3,19 @@
    Interactive Effects
 ===================================================== */
 
+document.documentElement.classList.add("js");
+
 
 /* =====================================================
    1. 鼠标跟随光晕
 ===================================================== */
 
 const glow = document.querySelector(".cursor-glow");
-const reduceMotion = window.matchMedia(
-  "(prefers-reduced-motion: reduce)"
-).matches;
+const reduceMotion = window.matchMedia
+  ? window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches
+  : false;
 
 window.addEventListener("pointermove", (event) => {
 
